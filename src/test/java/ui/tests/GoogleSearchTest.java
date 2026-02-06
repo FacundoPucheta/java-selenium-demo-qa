@@ -1,9 +1,9 @@
-package test;
+package ui.tests;
 
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.GoogleHomePage;
+import pages.google.GoogleHomePage;
 
 public class GoogleSearchTest extends BaseTest {
 
