@@ -1,4 +1,4 @@
-package pages;
+package pages.google;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,12 +6,13 @@ import org.openqa.selenium.WebDriver;
 public class GoogleHomePage {
     private WebDriver driver;
 
-    private final By searchInput = By.name("q");
-    private final By descriptionTitle = By.xpath("//div[@style='font-size:13px;']/b");
-
     public GoogleHomePage(WebDriver driver) {
         this.driver = driver;
     }
+
+    //Selectores
+    private final By searchInput = By.name("q");
+    private final By descriptionTitle = By.xpath("//div[@style='font-size:13px;']/b");
 
     //Metodos
     public void open() {
