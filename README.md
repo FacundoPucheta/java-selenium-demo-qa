@@ -117,7 +117,7 @@ La API cumple el rol conceptual de la capa DAO.
 
 Los resultados de ejecución se visualizan mediante **Allure Reports**, permitiendo:
 
-* Ver resultados por test
+* Ver resultados por ui
 * Evidenciar fallos
 * Mostrar pasos ejecutados
 
@@ -126,7 +126,7 @@ Los resultados de ejecución se visualizan mediante **Allure Reports**, permitie
 ## ▶️ Ejecución
 
 ```bash
-mvn clean test
+mvn clean ui
 ```
 
 Para visualizar el reporte Allure:
