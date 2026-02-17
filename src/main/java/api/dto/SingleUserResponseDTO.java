@@ -12,12 +12,8 @@ public class SingleUserResponseDTO {
         return data;
     }
 
-    public void setData(UserDTO data) {
-        this.data = data;
-    }
-
     @Override
     public String toString() {
-        return data.getUserData();
+        return data != null ? data.getUserData() : "Data de usuario inexistente";
     }
 }

@@ -38,7 +38,7 @@ public class ReqResApiTest {
         //Verificaciones generales
         Assert.assertNotNull(user, "La respuesta obtenida no debería ser nula");
         Assert.assertNotNull(user.getFirstName(), "El nombre del usuario no debería ser nulo");
-        Assert.assertNotNull(user.getLastName(), "El nombre del usuario no debería ser nulo");
+        Assert.assertNotNull(user.getLastName(), "El apellido del usuario no debería ser nulo");
 
         //Verificaciones sobre el ID
         Assert.assertNotNull(user.getId(), "El ID del usuario no debería ser nula");

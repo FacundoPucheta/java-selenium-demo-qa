@@ -1,15 +1,14 @@
-package api.base;
+package api.config;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
-import utils.ConfigReader;
 
-public class BaseApi {
+public class ApiRequestSpec {
     protected RequestSpecification requestSpec;
     private static final String BASE_URL = ConfigReader.get("api.base.url");
     private static final String API_KEY = ConfigReader.get("reqres.api.key");
 
-    protected BaseApi() {
+    protected ApiRequestSpec() {
         requestSpec = new RequestSpecBuilder()
                 .setBaseUri(BASE_URL)
                 .setBasePath("/api")

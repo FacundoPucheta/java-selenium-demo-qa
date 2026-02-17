@@ -13,7 +13,7 @@ public class UserDTO {
     private String name; // POST
 
     @JsonProperty("job")
-    private String job; // POST
+    private String job;
 
     @JsonProperty("first_name")
     private String firstName; // GET
