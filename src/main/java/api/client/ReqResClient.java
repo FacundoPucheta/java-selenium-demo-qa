@@ -1,39 +1,34 @@
 package api.client;
 
-import api.base.BaseApi;
+import api.config.ApiRequestSpec;
 import api.dto.SingleUserResponseDTO;
 import api.dto.UserDTO;
-import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
-public class ReqResClient extends BaseApi {
-
+public class ReqResClient extends ApiRequestSpec {
 
     public UserDTO createUser(String name, String job) {
-        Response response =
-                given().spec(requestSpec).body("""
+        return given().spec(requestSpec)
+                .body("""
                         {
                           "name": "%s",
                           "job": "%s"
                         }
                         """
-                        .formatted(name, job)).post("/users");
-
-        response.then().statusCode(201);
-        return response.as(UserDTO.class);
+                        .formatted(name, job))
+                .post("/users")
+                .then()
+                .statusCode(201)
+                .extract().as(UserDTO.class);
     }
 
     public UserDTO getUserById(String userId) {
-        return given()
-                .spec(requestSpec)
+        return given().spec(requestSpec)
                 .when()
                 .get("/users/" + userId)
                 .then()
                 .statusCode(200)
-                .extract()
-                .as(SingleUserResponseDTO.class)
-                .getData();
+                .extract().as(SingleUserResponseDTO.class).getData();
     }
-
 }

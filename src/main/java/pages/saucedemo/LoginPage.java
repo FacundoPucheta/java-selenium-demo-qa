@@ -17,10 +17,6 @@ public class LoginPage {
     private final By loginButton = By.id("login-button");
 
     //Métodos
-    public void open() {
-        driver.get("https://www.saucedemo.com/");
-    }
-
     public void login(String user, String password) {
         driver.findElement(usernameInput).sendKeys(user);
         driver.findElement(passwordInput).sendKeys(password);

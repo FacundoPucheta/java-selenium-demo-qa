@@ -7,12 +7,14 @@ public class InventoryPage {
 
     private WebDriver driver;
 
-    private By inventoryContainer = By.id("inventory_container");
-
     public InventoryPage(WebDriver driver) {
         this.driver = driver;
     }
 
+    //Selectores
+    private final By inventoryContainer = By.id("inventory_container");
+
+    //Métodos
     public boolean isLoaded() {
         return driver.findElement(inventoryContainer).isDisplayed();
     }
